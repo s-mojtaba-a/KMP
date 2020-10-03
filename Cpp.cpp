@@ -29,8 +29,10 @@ void lps(const string &s, int arr[])
     }
 }
 
-vector<int> kmp(const string &s1, const string &s2, int arr[])
+vector<int> kmp(const string &s1, const string &s2)
 {
+    int arr[s2.length()] ;
+    lps(s2,arr) ;
     vector<int> ans;
     int n = s1.length(), m = s2.length();
     ans.reserve(n - m + 1);
@@ -85,7 +87,8 @@ def lps(s):
     return(arr)
 
 
-def kmp(s1, s2, arr):
+def kmp(s1, s2):
+    arr=lps(s2)
     ans = []
     n = len(s1)
     m = len(s2)
