@@ -70,7 +70,7 @@ int main()
 #### python impelemenation ### 
 def lps(s):
     i = 0
-    j = 0
+    j = 1
     m = len(s)
     arr = [0]*m
     while j < m:
